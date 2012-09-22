@@ -1,0 +1,7 @@
+= Script Library
+
+Customizable scripts for LSL and Open Simulator platforms.
+
+== Author
+
+{Marc S. Brooks}[https://github.com/nuxy]
