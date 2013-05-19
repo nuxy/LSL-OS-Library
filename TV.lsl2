@@ -2,7 +2,7 @@
  *  TV Media Player
  *  Script to play remote media in LSL and Open Simulator platforms
  *
- *  Copyright 2011-2012, Marc S. Brooks (http://mbrooks.info)
+ *  Copyright 2011-2013, Marc S. Brooks (http://mbrooks.info)
  *  Licensed under the MIT license:
  *  http://www.opensource.org/licenses/mit-license.php
  *
@@ -32,7 +32,7 @@ default
             }
             else
             {
-                action = "Turn On";
+                action = "Turn On";  
             }
         
             llDialog(llDetectedKey(0), text, [action], 8192);
@@ -43,9 +43,10 @@ default
     {
         llListenRemove(lkey);
 
-        if (msg == "Turn On")
+        if (msg == "Turn On") 
         {
             llSetLinkPrimitiveParams(LINK_ROOT, [ PRIM_FULLBRIGHT, ALL_SIDES, TRUE ]);
+            llSetPrimitiveParams([ PRIM_POINT_LIGHT, TRUE, <1.0, 1.0, 1.0>, 1.0, 2.0, 2.0 ]);
             llSetLinkAlpha(LINK_ROOT, 100.0, ALL_SIDES);
             llParcelMediaCommandList([PARCEL_MEDIA_COMMAND_URL, video_url]);
 
@@ -56,8 +57,9 @@ default
         {
             llSetLinkPrimitiveParams(LINK_ROOT, [ PRIM_FULLBRIGHT, ALL_SIDES, FALSE ]);
             llSetLinkAlpha(LINK_ROOT, 0.0, ALL_SIDES);
+            llSetPrimitiveParams([ PRIM_POINT_LIGHT, FALSE, <0.0, 1.0, 0.0>, 1.0, 2.0, 2.0 ]);
             llSleep(1.0);
-            llParcelMediaCommandList([PARCEL_MEDIA_COMMAND_UNLOAD]);
+            llParcelMediaCommandList([PARCEL_MEDIA_COMMAND_UNLOAD, PARCEL_MEDIA_COMMAND_URL, ""]);
                 
             playing = FALSE;
         }
