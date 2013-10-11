@@ -4,9 +4,9 @@ Customizable scripts for LSL and Open Simulator platforms.
 
 == Archive
 
-Horizontal Blinds
-Ceiling Fan w/switch
-TV/MP4 Player
+- Horizontal Blinds
+- Ceiling Fan w/ Switch
+- TV/MP4 Player
 
 == Author
 
