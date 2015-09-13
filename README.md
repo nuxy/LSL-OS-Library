@@ -1,13 +1,13 @@
-= Script Library
+# Script Library
 
 Customizable scripts for LSL and Open Simulator platforms.
 
-== Archive
+## Archive
 
 - Horizontal Blinds
 - Ceiling Fan w/ Switch
 - TV/MP4 Player
 
-== Author
+## Author
 
-{Marc S. Brooks}[https://github.com/nuxy]
+[Marc S. Brooks](https://github.com/nuxy)
