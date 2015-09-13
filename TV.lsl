@@ -1,8 +1,8 @@
-/*
+/**
  *  TV Media Player
  *  Script to play remote media in LSL and Open Simulator platforms
  *
- *  Copyright 2011-2013, Marc S. Brooks (http://mbrooks.info)
+ *  Copyright 2011-2015, Marc S. Brooks (https://mbrooks.info)
  *  Licensed under the MIT license:
  *  http://www.opensource.org/licenses/mit-license.php
  *
@@ -32,9 +32,9 @@ default
             }
             else
             {
-                action = "Turn On";  
+                action = "Turn On";
             }
-        
+ 
             llDialog(llDetectedKey(0), text, [action], 8192);
         }
     }
@@ -60,7 +60,7 @@ default
             llSetPrimitiveParams([ PRIM_POINT_LIGHT, FALSE, <0.0, 1.0, 0.0>, 1.0, 2.0, 2.0 ]);
             llSleep(1.0);
             llParcelMediaCommandList([PARCEL_MEDIA_COMMAND_UNLOAD, PARCEL_MEDIA_COMMAND_URL, ""]);
-                
+ 
             playing = FALSE;
         }
     }
